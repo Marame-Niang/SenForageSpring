@@ -1,0 +1,17 @@
+{"properties": [
+  {
+    "name": "spring.datasource.DriverClassName",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.datasource.DriverClassName'"
+  },
+  {
+    "name": "HikariConfig",
+    "type": "java.lang.String",
+    "description": "A description for 'HikariConfig'"
+  },
+  {
+    "name": "config.setPoolName(\"AARSHikaripool-\"",
+    "type": "java.lang.String",
+    "description": "A description for 'config.setPoolName(\"AARSHikaripool-\"'"
+  }
+]}
