@@ -2,7 +2,6 @@ package com.example.demo.web;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler;
@@ -15,12 +14,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class AdminController {
 	@RequestMapping(value = "/")
 	public String index() {
-		return "redirect:/logon";
+		return "login";
 	}
 	
 	@RequestMapping(value = "")
 	public String home() {
-		return "redirect:/logon";
+		return "redirect:/login";
 	}
 	
 	@RequestMapping(value = "/logon")
@@ -29,7 +28,7 @@ public class AdminController {
 		String user = req.getRemoteUser();
 		System.out.println("Le username est" +user);
 		if(user !=null)	
-			return "index";
+			return "/index";
 		else
 			return "redirect:/login";
 	}
@@ -48,7 +47,7 @@ public class AdminController {
 		return "redirect:/login?logout";
 	}
 	
-	@RequestMapping(value = "/Admin/403")
+	@RequestMapping(value = "/403")
 	public String denied() {
 		return "403";
 	}

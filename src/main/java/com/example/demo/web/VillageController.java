@@ -19,7 +19,7 @@ public class VillageController {
 	@Autowired
 	private VillageRepository villageRepository;
 	
-	@RequestMapping(value = {"/", "index"}, method = RequestMethod.GET)
+	@RequestMapping(value = {"/index"}, method = RequestMethod.GET)
 	public String index() {
 		return "index";
 	}

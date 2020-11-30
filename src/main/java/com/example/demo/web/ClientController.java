@@ -6,8 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
-import org.springframework.validation.BindingResult;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -34,12 +32,10 @@ public class ClientController {
 	}
 	
 	@RequestMapping(value = "/enregistrer", method = RequestMethod.POST)
-	public String save(Model model, @Validated Client client, BindingResult bindingResult) {
-		if(bindingResult.hasErrors())
-			return "client/ajout";
+	public String save(Model model, Client client) {
 		model.addAttribute("client", new Client());
 		clientRepository.save(client);
-		return "redirect:/listeClient`";
+		return "redirect:/listeClient";
 	}
 	
 	@RequestMapping(value = "/listeClient")

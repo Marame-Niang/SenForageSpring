@@ -3,12 +3,11 @@ package com.example.demo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
-
 import com.example.demo.dao.ClientRepository;
 import com.example.demo.dao.IRoles;
 import com.example.demo.dao.IUser;
 import com.example.demo.dao.VillageRepository;
-import com.example.demo.entities.Roles;
+
 import com.example.demo.entities.User;
 
 
@@ -28,8 +27,8 @@ public class SenForageSpringApplication {
 		
 		IRoles roleRepository = ctx.getBean(IRoles.class);
 		
-		userRepository.save(new User(1, "Niang", "Marame", "thiatatou@gmail.com", "Thiatasse", 1, null));
-		roleRepository.save(new Roles(1,"ROLE_USER", null));
+//		userRepository.save(new User(1, "Niang", "Marame", "thiatatou@gmail.com", "Thiatasse", 1, null));
+//		roleRepository.save(new Roles(1,"ROLE_USER", null));
 //		User user = new User();
 //		user.setNom("Niang");
 //		user.setPrenom("Marame");
